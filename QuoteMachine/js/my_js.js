@@ -1,6 +1,5 @@
-/**
- * Created by DenysLins on 22/02/16.
- */
+
+
 
 function getQuote() {
     var output = $.ajax({
@@ -9,7 +8,7 @@ function getQuote() {
         data: {},
         dataType: 'json',
         success: function (data) {
-            document.getElementById("text").innerHTML = data.quote;
+            document.getElementById("text").innerHTML = '<i class="fa fa-quote-left"></i>&nbsp;' + data.quote;
             document.getElementById("author").innerHTML = data.author;
         },
         error: function (err) {
